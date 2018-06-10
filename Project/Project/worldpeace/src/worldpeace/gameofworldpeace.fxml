@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="748.0" style="-fx-background-color: #00ffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldpeace.GameOfWorldPeaceController">
+   <children>
+      <MenuBar layoutX="-2.0" prefHeight="25.0" prefWidth="758.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Game">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Reset" text="Reset" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Option">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#doExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Rules" text="Rule" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="320.0" layoutY="601.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="375.0" layoutY="649.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="320.0" layoutY="649.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="320.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="375.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="320.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="375.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="375.0" layoutY="601.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+      <Line endX="650.0" layoutX="400.0" layoutY="349.0" startX="-100.0" AnchorPane.leftAnchor="0.5" />
+      <ComboBox fx:id="Weapons" layoutX="625.0" layoutY="350.0" onAction="#AddingChoice" prefHeight="25.0" prefWidth="129.0" promptText="Add Your Force" visible="false" />
+      <CubicCurve fx:id="Flag1" controlX1="-50.0" controlX2="50.0" controlY2="100.0" endX="75.0" fill="DODGERBLUE" layoutX="381.0" layoutY="562.0" rotate="-93.4" scaleX="0.13" startX="-150.0" stroke="BLACK" visible="false" />
+      <CubicCurve fx:id="Flag2" controlX1="-50.0" controlX2="50.0" controlY2="100.0" endX="75.0" fill="DODGERBLUE" layoutX="429.0" layoutY="562.0" rotate="-93.4" scaleX="0.13" startX="-150.0" stroke="BLACK" visible="false" />
+      <CubicCurve fx:id="Flag3" controlX1="-50.0" controlX2="50.0" controlY2="100.0" endX="75.0" fill="DODGERBLUE" layoutX="477.0" layoutY="562.0" rotate="-93.4" scaleX="0.13" startX="-150.0" stroke="BLACK" visible="false" />
+      <CubicCurve fx:id="P2Flag1" controlX1="-50.0" controlX2="50.0" controlY2="100.0" endX="75.0" fill="DODGERBLUE" layoutX="358.0" layoutY="119.0" rotate="86.6" scaleX="0.13" startX="-150.0" stroke="BLACK" visible="false" />
+      <CubicCurve fx:id="P2Flag2" controlX1="-50.0" controlX2="50.0" controlY2="100.0" endX="75.0" fill="DODGERBLUE" layoutX="406.0" layoutY="119.0" rotate="86.6" scaleX="0.13" startX="-150.0" stroke="BLACK" visible="false" />
+      <CubicCurve fx:id="P2Flag3" controlX1="-50.0" controlX2="50.0" controlY2="100.0" endX="75.0" fill="DODGERBLUE" layoutX="452.0" layoutY="119.0" rotate="86.6" scaleX="0.13" startX="-150.0" stroke="BLACK" visible="false" />
+      <Rectangle fx:id="P2ProtectField1" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="151.0" layoutX="281.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="190.0" />
+      <Rectangle fx:id="P2ProtectField2" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="179.0" layoutX="240.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="270.0" />
+      <Rectangle fx:id="ProtectField2" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="179.0" layoutX="242.0" layoutY="519.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="270.0" />
+      <Rectangle fx:id="ProtectField1" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="151.0" layoutX="288.0" layoutY="547.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="190.0" />
+      <Text fx:id="name1" layoutX="340.0" layoutY="634.0" strokeType="OUTSIDE" strokeWidth="0.0" text="U">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="P2name1" layoutX="341.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="U">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="name3" layoutX="340.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="name2" layoutX="395.0" layoutY="634.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="name4" layoutX="395.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="P2name2" layoutX="395.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="P2name3" layoutX="338.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="P2name4" layoutX="395.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="Army1" fitHeight="94.0" fitWidth="98.0" layoutX="574.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
+         <image>
+            <Image url="@../Image/Army1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Army2" fitHeight="111.0" fitWidth="75.0" layoutX="461.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Image/Army2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Army3" fitHeight="111.0" fitWidth="75.0" layoutX="330.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Image/Army3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Army4" fitHeight="32.0" fitWidth="96.0" layoutX="103.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Image/Army4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="P2Army4" fitHeight="111.0" fitWidth="75.0" layoutX="85.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Image/Army1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="P2Army3" fitHeight="111.0" fitWidth="75.0" layoutX="265.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Image/Army2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="P2Army2" fitHeight="111.0" fitWidth="75.0" layoutX="454.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Image/Army3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="P2Army1" fitHeight="111.0" fitWidth="75.0" layoutX="614.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Image/Army4.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="P2Weapons" layoutX="627.0" layoutY="25.0" onAction="#P2AddingChoice" prefHeight="25.0" prefWidth="129.0" promptText="Add your Force" visible="false" />
+      <ComboBox fx:id="Destroy" layoutX="10.0" layoutY="349.0" onAction="#AttackChoice" prefWidth="150.0" promptText="Kill them all" visible="false" />
+      <ComboBox fx:id="P2Destroy" layoutX="1.0" layoutY="25.0" onAction="#P2AttackChoice" prefWidth="150.0" promptText="Kill them all" visible="false" />
+      <Button fx:id="RandomButton" layoutX="292.0" layoutY="336.0" mnemonicParsing="false" onAction="#Ramdom" text="Dice it!" />
+   </children>
+</AnchorPane>
